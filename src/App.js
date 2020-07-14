@@ -25,19 +25,18 @@ const App = () => {
 
     setPosts(
       posts.map((post) => {
-        if (posts.id === postId) {
-          postId.likes++;
-          return post;
+        if (post.id === postId) {
+          return { ...post, likes: post.likes + 1 };
         } else {
           return post;
         }
-
-        // The callback passed into `posts.map()` performs the following logic:
-        //  - if the `id` of the post matches `postId`, return a new post object containing an increased 'likes' count.
-        //  - otherwise just return the post object unchanged.
       })
     );
   };
+
+  // The callback passed into `posts.map()` performs the following logic:
+  //  - if the `id` of the post matches `postId`, return a new post object containing an increased 'likes' count.
+  //  - otherwise just return the post object unchanged.
 
   return (
     <div className="App">

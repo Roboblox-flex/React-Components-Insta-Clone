@@ -1,7 +1,7 @@
 // You will add code to this file
 import React from "react";
 import Comments from "../Comments/Comments";
-import LikeSection from "./LikeSection";
+import LikeSection from "./LikeSection.jsx";
 import PostHeader from "./PostHeader";
 
 const Post = (props) => {

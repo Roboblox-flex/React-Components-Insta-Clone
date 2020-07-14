@@ -20,6 +20,7 @@ const LikeSection = (props) => {
         </div>
       </div>
       <p className="like-number">{likeCount} likes</p>
+      <button onClick={(evt) => likePost()}>Like</button>
     </div>
   );
 };
