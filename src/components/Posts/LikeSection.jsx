@@ -13,14 +13,18 @@ const LikeSection = (props) => {
     <div>
       <div className="like-section" key="likes-icons-container">
         <div className="like-section-wrapper">
-          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon
+            icon={faHeart}
+            onClick={(evt) => likePost()}
+            style={{ color: "red" }}
+          />
         </div>
         <div className="like-section-wrapper">
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
       <p className="like-number">{likeCount} likes</p>
-      <button onClick={(evt) => likePost()}>Like</button>
+      <button></button>
     </div>
   );
 };
